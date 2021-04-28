@@ -1,0 +1,61 @@
+completed work.....
+
+day 01////////
+
+ADMIN  PAGE         -login/logout(static)
+categories master   - crud,deact/activate,same name error
+product master      - crud,image violation error,deact/activate
+user read           - show and delete
+contact us          - show and delete
+
+
+
+day 02/////
+
+
+customer page:(front end theme manupulate) 
+
+
+login/registration page create on front end
+add to cart button for produtct(only front end)
+fully functional contact us page
+fetching category at the top from database 
+fetching product details with clicking protduct
+
+
+
+day 03/////
+
+a.login/registration page with correct error mssg and logout
+
+b.ADD to cart functionality -
+          0.product fetch, 
+          1.remove ,
+          2.add,
+          3.sub totatal price,
+          4.quantity update.
+
+
+day 04/////
+
+complete checkout page(cod process)
+1.order and order detail page
+2.order history(My order)
+
+day 05/////
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
