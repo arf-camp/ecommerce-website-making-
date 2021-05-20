@@ -52,7 +52,7 @@ if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
 
 
               <li class="menu-item-has-children dropdown">
-                     <a href="#" > Order Master</a>
+                     <a href="order_master.php" > Order Master</a>
                   </li>
 
 

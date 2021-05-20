@@ -139,7 +139,7 @@ $totalProduct=$obj->totalProduct();
                                         
 
                                         <?php if(isset($_SESSION['USER_LOGIN'])){
-                                            echo '<a href="logout.php">Logout</a><a href="my_order.php">My Order</a>';
+                                            echo '<a href="my_order.php">My Order</a><a href="logout.php">Logout</a>';
                                         }else{
                                             echo '<a href="login.php">Login/Register</a>';
                                         }

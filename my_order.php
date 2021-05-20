@@ -48,7 +48,8 @@ if(!isset($_SESSION['USER_LOGIN'])){
                                         <tbody>
 											<?php
 											$uid=$_SESSION['USER_ID'];
-											$res=mysqli_query($con,"select * from `order` where user_id='$uid'");
+											$res=mysqli_query($con,"select `order`.*,order_status.name as order_status_str from `order`,order_status where `order`.user_id='$uid' and order_status.id=`order`.order_status");
+                                            
 											while($row=mysqli_fetch_assoc($res)){
 											?>
                                             <tr>
@@ -61,7 +62,7 @@ if(!isset($_SESSION['USER_LOGIN'])){
 												</td>
 												<td class="product-name"><?php echo $row['payment_type']?></td>
 												<td class="product-name"><?php echo $row['payment_status']?></td>
-												<td class="product-name"><?php echo $row['order_status']?></td>
+												<td class="product-name"><?php echo $row['order_status_str']?></td>
                                                 
                                             </tr>
                                             <?php } ?>

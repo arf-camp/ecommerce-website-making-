@@ -39,9 +39,9 @@ if(isset($_POST['submit']))
     $total_price=$cart_total;
     $payment_status='pending';
     if($payment_type=='cod'){
-        $payment_status='success';
+        $payment_status='cash on delivery';
     }
-    $order_status='pending';
+    $order_status='1';   //changing from pending
     $added_on=date('Y-m-d h:i:s');
 
 

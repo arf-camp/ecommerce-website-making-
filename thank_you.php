@@ -27,7 +27,7 @@ require('top.php');
                         <div class="checkout__inner">
                             <div class="accordion-list">
                                 <div class="accordion">
-                                    Your order has been placed successfully
+                                     Your order has been placed successfully.Check your Order Status from Order History.
 									
 								</div>
                             </div>

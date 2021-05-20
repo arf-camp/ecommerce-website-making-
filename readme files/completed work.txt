@@ -44,6 +44,14 @@ complete checkout page(cod process)
 
 day 05/////
 
+(*fixing some previous bugs>>>
+editing category name on each category page, cod payment type status)
+
+1. creating order status table on database 
+2. creating order master page 
+3. and order master detail page ---->Admin order status updating 
+
+
 
 
 
