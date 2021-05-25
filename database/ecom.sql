@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2021 at 04:39 PM
+-- Generation Time: May 26, 2021 at 12:32 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -100,6 +100,9 @@ CREATE TABLE `order` (
   `total_price` float NOT NULL,
   `payment_status` varchar(40) NOT NULL,
   `order_status` int(11) NOT NULL,
+  `txnid` varchar(20) NOT NULL,
+  `mihpayid` varchar(20) NOT NULL,
+  `payu_status` varchar(10) NOT NULL,
   `added_on` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -107,8 +110,11 @@ CREATE TABLE `order` (
 -- Dumping data for table `order`
 --
 
-INSERT INTO `order` (`id`, `user_id`, `address`, `city`, `pincode`, `payment_type`, `total_price`, `payment_status`, `order_status`, `added_on`) VALUES
-(1, 4, 'khilgaon', 'dhaka', 1213, 'cod', 250, 'cash on delivery', 2, '2021-05-19 04:36:27');
+INSERT INTO `order` (`id`, `user_id`, `address`, `city`, `pincode`, `payment_type`, `total_price`, `payment_status`, `order_status`, `txnid`, `mihpayid`, `payu_status`, `added_on`) VALUES
+(1, 1, 'khilgaon', 'dhaka', 1232, 'cod', 250, 'cash on delivery', 2, '', '', '', '2021-05-25 12:47:17'),
+(3, 1, 'khilgaon', 'dhaka', 1219, 'biKash', 250, 'pending', 1, '', '', '', '2021-05-25 12:53:35'),
+(4, 1, 'khilgaon', 'dhaka', 1624, 'cod', 1000, 'cash on delivery', 1, '', '', '', '2021-05-25 07:04:22'),
+(5, 1, 'khilgaon', 'dhaka', 1216, 'biKash', 250, 'pending', 1, '', '', '', '2021-05-25 07:15:06');
 
 -- --------------------------------------------------------
 
@@ -130,7 +136,10 @@ CREATE TABLE `order_detail` (
 --
 
 INSERT INTO `order_detail` (`id`, `order_id`, `product_id`, `qty`, `price`, `added_on`) VALUES
-(1, 1, 1, 1, 250, '0000-00-00 00:00:00');
+(1, 1, 1, 1, 250, '0000-00-00 00:00:00'),
+(3, 3, 1, 1, 250, '0000-00-00 00:00:00'),
+(4, 4, 3, 1, 1000, '0000-00-00 00:00:00'),
+(5, 5, 2, 1, 250, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -183,7 +192,8 @@ CREATE TABLE `product` (
 INSERT INTO `product` (`id`, `categories_id`, `name`, `mrp`, `price`, `qty`, `image`, `short_desc`, `description`, `meta_title`, `meta_desc`, `meta_keyword`, `status`) VALUES
 (1, 3, 'boss chair', 300, 250, 5, '587_883_119845920_2.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, nunc vitae consequat eleifend, augue urna bibendum felis, at volutpat elit magna eu sem. Duis in aliquam arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare dolor id orci mattis, vitae laoreet enim euismod. Mauris fringilla vitae augue sed interdum. Morbi posuere et lacus at imperdiet. Nulla pharetra est eget elit ultricies consequat.', 'Sed in egestas nunc. Morbi condimentum iaculis odio et ullamcorper. Proin est turpis, sagittis id imperdiet a, tempus ut orci. Duis sem enim, tempus eu aliquet ut, suscipit ut mi. Cras eget quam in odio imperdiet pretium. Donec dictum neque eu lectus venenatis tempor. Aliquam sed ex sed justo suscipit porttitor in eleifend ipsum.\r\n\r\nVivamus tincidunt, nibh at sodales tincidunt, risus nunc auctor ligula, aliquet ultrices lectus felis ac magna. Etiam id consequat quam. Praesent molestie tincidunt urna ac suscipit. Suspendisse magna diam, laoreet sit amet ornare bibendum, facilisis non metus. Ut luctus non felis at efficitur. Nullam placerat enim nec volutpat vulputate. Nunc vel dui imperdiet, suscipit dolor non, efficitur enim. Phasellus pretium, sapien vel fermentum mollis, justo ante sollicitudin est, pretium aliquet dui ipsum nec massa.', 'fssfssf', 'sfsfs', 'sfsfs', 1),
 (2, 1, 'excersice tool', 343, 250, 5, '684_513_578369140_1 (1).jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, nunc vitae consequat eleifend, augue urna bibendum felis, at volutpat elit magna eu sem. Duis in aliquam arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare dolor id orci mattis, vitae laoreet enim euismod. Mauris fringilla vitae augue sed interdum. Morbi posuere et lacus at imperdiet. Nulla pharetra est eget elit ultricies consequat.', 'Sed in egestas nunc. Morbi condimentum iaculis odio et ullamcorper. Proin est turpis, sagittis id imperdiet a, tempus ut orci. Duis sem enim, tempus eu aliquet ut, suscipit ut mi. Cras eget quam in odio imperdiet pretium. Donec dictum neque eu lectus venenatis tempor. Aliquam sed ex sed justo suscipit porttitor in eleifend ipsum.\r\n\r\nVivamus tincidunt, nibh at sodales tincidunt, risus nunc auctor ligula, aliquet ultrices lectus felis ac magna. Etiam id consequat quam. Praesent molestie tincidunt urna ac suscipit. Suspendisse magna diam, laoreet sit amet ornare bibendum, facilisis non metus. Ut luctus non felis at efficitur. Nullam placerat enim nec volutpat vulputate. Nunc vel dui imperdiet, suscipit dolor non, efficitur enim. Phasellus pretium, sapien vel fermentum mollis, justo ante sollicitudin est, pretium aliquet dui ipsum nec massa.', 'dfdsfd', 'fdfdfd', 'dfdf', 1),
-(3, 2, 'sofa21212', 1212, 1000, 23, '975_218_287733289_3.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, nunc vitae consequat eleifend, augue urna bibendum felis, at volutpat elit magna eu sem. Duis in aliquam arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare dolor id orci mattis, vitae laoreet enim euismod. Mauris fringilla vitae augue sed interdum. Morbi posuere et lacus at imperdiet. Nulla pharetra est eget elit ultricies consequat.\r\n\r\nSed in egestas nunc. Morbi condimentum iaculis odio et ullamcorper. Proin est turpis, sagittis id imperdiet a, tempus ut orci. Duis sem enim, tempus eu aliquet ut, suscipit ut mi. Cras eget quam in odio imperdiet pretium. Donec dictum neque eu lectus venenatis tempor. Aliquam sed ex sed justo suscipit porttitor in eleifend ipsum.', 'Vivamus tincidunt, nibh at sodales tincidunt, risus nunc auctor ligula, aliquet ultrices lectus felis ac magna. Etiam id consequat quam. Praesent molestie tincidunt urna ac suscipit. Suspendisse magna diam, laoreet sit amet ornare bibendum, facilisis non metus. Ut luctus non felis at efficitur. Nullam placerat enim nec volutpat vulputate. Nunc vel dui imperdiet, suscipit dolor non, efficitur enim. Phasellus pretium, sapien vel fermentum mollis, justo ante sollicitudin est, pretium aliquet dui ipsum nec massa.\r\n\r\nAenean non tellus ut diam pulvinar volutpat. Nullam viverra, urna sit amet pharetra commodo, nulla dui viverra erat, vitae efficitur libero nisl vel lectus. Sed congue sit amet magna in pharetra. Donec tempus lacus non rhoncus fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales vitae augue vitae venenatis. In hac habitasse platea dictumst. Praesent dapibus sollicitudin nibh. Integer aliquet rutrum lectus, nec ultricies metus convallis sit amet. Proin volutpat ornare consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi eros libero, venenatis vitae pellentesque eget, auctor a diam. Proin pharetra non nisi ut faucibus. Fusce ut ligula pellentesque, eleifend nisi eu, mattis massa.', 'asdasa', 'asasa', 'asa', 1);
+(3, 2, 'sofa21212', 1212, 1000, 23, '975_218_287733289_3.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, nunc vitae consequat eleifend, augue urna bibendum felis, at volutpat elit magna eu sem. Duis in aliquam arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare dolor id orci mattis, vitae laoreet enim euismod. Mauris fringilla vitae augue sed interdum. Morbi posuere et lacus at imperdiet. Nulla pharetra est eget elit ultricies consequat.\r\n\r\nSed in egestas nunc. Morbi condimentum iaculis odio et ullamcorper. Proin est turpis, sagittis id imperdiet a, tempus ut orci. Duis sem enim, tempus eu aliquet ut, suscipit ut mi. Cras eget quam in odio imperdiet pretium. Donec dictum neque eu lectus venenatis tempor. Aliquam sed ex sed justo suscipit porttitor in eleifend ipsum.', 'Vivamus tincidunt, nibh at sodales tincidunt, risus nunc auctor ligula, aliquet ultrices lectus felis ac magna. Etiam id consequat quam. Praesent molestie tincidunt urna ac suscipit. Suspendisse magna diam, laoreet sit amet ornare bibendum, facilisis non metus. Ut luctus non felis at efficitur. Nullam placerat enim nec volutpat vulputate. Nunc vel dui imperdiet, suscipit dolor non, efficitur enim. Phasellus pretium, sapien vel fermentum mollis, justo ante sollicitudin est, pretium aliquet dui ipsum nec massa.\r\n\r\nAenean non tellus ut diam pulvinar volutpat. Nullam viverra, urna sit amet pharetra commodo, nulla dui viverra erat, vitae efficitur libero nisl vel lectus. Sed congue sit amet magna in pharetra. Donec tempus lacus non rhoncus fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales vitae augue vitae venenatis. In hac habitasse platea dictumst. Praesent dapibus sollicitudin nibh. Integer aliquet rutrum lectus, nec ultricies metus convallis sit amet. Proin volutpat ornare consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi eros libero, venenatis vitae pellentesque eget, auctor a diam. Proin pharetra non nisi ut faucibus. Fusce ut ligula pellentesque, eleifend nisi eu, mattis massa.', 'asdasa', 'asasa', 'asa', 1),
+(4, 2, '2 cushon sofa', 356, 2000, 4, '293_sofa.jpg', 'this is a 2 cushion sofa', 'this is a 2 cushion sofa', 'be comfortable', 'be comfortable and proud', 'proud', 1);
 
 -- --------------------------------------------------------
 
@@ -205,9 +215,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `email`, `mobile`, `added_on`) VALUES
-(4, 'Md Ashequr Rahman', '123', 'tysonfarib@gmail.com', '01198636586', '2021-04-18 01:46:13'),
-(5, 'Md Ashequr Rahman', '123', 'arfcamp.net', '0137574556575', '2021-04-21 05:13:43'),
-(6, 'excersice tool', '123', 'fgtfgfg', '0101010', '2021-04-21 05:17:00');
+(1, 'ARF', '123', 'tysonfarib@gmail.com', '52542424', '2021-05-25 12:42:44');
 
 --
 -- Indexes for dumped tables
@@ -287,13 +295,13 @@ ALTER TABLE `contact_us`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `order_status`
@@ -305,13 +313,13 @@ ALTER TABLE `order_status`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

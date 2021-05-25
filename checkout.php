@@ -37,7 +37,9 @@ if(isset($_POST['submit']))
     $user_id=$_SESSION['USER_ID'];
 
     $total_price=$cart_total;
+    
     $payment_status='pending';
+    
     if($payment_type=='cod'){
         $payment_status='cash on delivery';
     }
@@ -268,7 +270,7 @@ if(isset($_POST['submit']))
         <div class="paymentinfo">
                                                
            <div class="single-method">COD <input type="radio" name="payment_type" value="cod" required/>
-                        &nbsp;&nbsp;PayU <input type="radio" name="payment_type" value="payu" required/>
+                        &nbsp;&nbsp;biKash <input type="radio" name="payment_type" value="biKash" required/>
                                                 
            </div>
                                                 

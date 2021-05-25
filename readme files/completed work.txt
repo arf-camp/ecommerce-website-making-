@@ -45,14 +45,21 @@ complete checkout page(cod process)
 day 05/////
 
 (*fixing some previous bugs>>>
-editing category name on each category page, cod payment type status)
+editing category name on each category/product page, cod payment type status)
 
 1. creating order status table on database 
 2. creating order master page 
 3. and order master detail page ---->Admin order status updating 
 
+day 06/////
 
+1.editing from payU from bikash
+2.editing javascript file :from main js to custom.js
+3.fixing my order page fetching order id in a  decending order
+4.fixing product name link on index and product page
 
+5.making search icon and complete the functionality
+6.product sorting complete functionality
 
 
  
