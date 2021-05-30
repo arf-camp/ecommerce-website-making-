@@ -24,9 +24,10 @@
 .main__menu > li > a {
     color: #333333;
     display: block;
-    font-size: 14px;
-    height: 80px;
-    line-height: 80px;
+    font-size: 13px;
+    height: 92px;
+    line-height: 30px;
+    margin-top: 20px;
     position: relative;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;

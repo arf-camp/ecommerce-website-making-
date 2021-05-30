@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2021 at 12:32 AM
+-- Generation Time: May 31, 2021 at 12:35 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -59,7 +59,8 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `categories`, `status`) VALUES
 (1, 'small chair', 1),
 (2, 'SOFA', 1),
-(3, 'comfortable chairs', 1);
+(3, 'comfortable chairs', 1),
+(4, 'tables', 1);
 
 -- --------------------------------------------------------
 
@@ -193,7 +194,8 @@ INSERT INTO `product` (`id`, `categories_id`, `name`, `mrp`, `price`, `qty`, `im
 (1, 3, 'boss chair', 300, 250, 5, '587_883_119845920_2.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, nunc vitae consequat eleifend, augue urna bibendum felis, at volutpat elit magna eu sem. Duis in aliquam arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare dolor id orci mattis, vitae laoreet enim euismod. Mauris fringilla vitae augue sed interdum. Morbi posuere et lacus at imperdiet. Nulla pharetra est eget elit ultricies consequat.', 'Sed in egestas nunc. Morbi condimentum iaculis odio et ullamcorper. Proin est turpis, sagittis id imperdiet a, tempus ut orci. Duis sem enim, tempus eu aliquet ut, suscipit ut mi. Cras eget quam in odio imperdiet pretium. Donec dictum neque eu lectus venenatis tempor. Aliquam sed ex sed justo suscipit porttitor in eleifend ipsum.\r\n\r\nVivamus tincidunt, nibh at sodales tincidunt, risus nunc auctor ligula, aliquet ultrices lectus felis ac magna. Etiam id consequat quam. Praesent molestie tincidunt urna ac suscipit. Suspendisse magna diam, laoreet sit amet ornare bibendum, facilisis non metus. Ut luctus non felis at efficitur. Nullam placerat enim nec volutpat vulputate. Nunc vel dui imperdiet, suscipit dolor non, efficitur enim. Phasellus pretium, sapien vel fermentum mollis, justo ante sollicitudin est, pretium aliquet dui ipsum nec massa.', 'fssfssf', 'sfsfs', 'sfsfs', 1),
 (2, 1, 'excersice tool', 343, 250, 5, '684_513_578369140_1 (1).jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, nunc vitae consequat eleifend, augue urna bibendum felis, at volutpat elit magna eu sem. Duis in aliquam arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare dolor id orci mattis, vitae laoreet enim euismod. Mauris fringilla vitae augue sed interdum. Morbi posuere et lacus at imperdiet. Nulla pharetra est eget elit ultricies consequat.', 'Sed in egestas nunc. Morbi condimentum iaculis odio et ullamcorper. Proin est turpis, sagittis id imperdiet a, tempus ut orci. Duis sem enim, tempus eu aliquet ut, suscipit ut mi. Cras eget quam in odio imperdiet pretium. Donec dictum neque eu lectus venenatis tempor. Aliquam sed ex sed justo suscipit porttitor in eleifend ipsum.\r\n\r\nVivamus tincidunt, nibh at sodales tincidunt, risus nunc auctor ligula, aliquet ultrices lectus felis ac magna. Etiam id consequat quam. Praesent molestie tincidunt urna ac suscipit. Suspendisse magna diam, laoreet sit amet ornare bibendum, facilisis non metus. Ut luctus non felis at efficitur. Nullam placerat enim nec volutpat vulputate. Nunc vel dui imperdiet, suscipit dolor non, efficitur enim. Phasellus pretium, sapien vel fermentum mollis, justo ante sollicitudin est, pretium aliquet dui ipsum nec massa.', 'dfdsfd', 'fdfdfd', 'dfdf', 1),
 (3, 2, 'sofa21212', 1212, 1000, 23, '975_218_287733289_3.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida, nunc vitae consequat eleifend, augue urna bibendum felis, at volutpat elit magna eu sem. Duis in aliquam arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare dolor id orci mattis, vitae laoreet enim euismod. Mauris fringilla vitae augue sed interdum. Morbi posuere et lacus at imperdiet. Nulla pharetra est eget elit ultricies consequat.\r\n\r\nSed in egestas nunc. Morbi condimentum iaculis odio et ullamcorper. Proin est turpis, sagittis id imperdiet a, tempus ut orci. Duis sem enim, tempus eu aliquet ut, suscipit ut mi. Cras eget quam in odio imperdiet pretium. Donec dictum neque eu lectus venenatis tempor. Aliquam sed ex sed justo suscipit porttitor in eleifend ipsum.', 'Vivamus tincidunt, nibh at sodales tincidunt, risus nunc auctor ligula, aliquet ultrices lectus felis ac magna. Etiam id consequat quam. Praesent molestie tincidunt urna ac suscipit. Suspendisse magna diam, laoreet sit amet ornare bibendum, facilisis non metus. Ut luctus non felis at efficitur. Nullam placerat enim nec volutpat vulputate. Nunc vel dui imperdiet, suscipit dolor non, efficitur enim. Phasellus pretium, sapien vel fermentum mollis, justo ante sollicitudin est, pretium aliquet dui ipsum nec massa.\r\n\r\nAenean non tellus ut diam pulvinar volutpat. Nullam viverra, urna sit amet pharetra commodo, nulla dui viverra erat, vitae efficitur libero nisl vel lectus. Sed congue sit amet magna in pharetra. Donec tempus lacus non rhoncus fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sodales vitae augue vitae venenatis. In hac habitasse platea dictumst. Praesent dapibus sollicitudin nibh. Integer aliquet rutrum lectus, nec ultricies metus convallis sit amet. Proin volutpat ornare consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi eros libero, venenatis vitae pellentesque eget, auctor a diam. Proin pharetra non nisi ut faucibus. Fusce ut ligula pellentesque, eleifend nisi eu, mattis massa.', 'asdasa', 'asasa', 'asa', 1),
-(4, 2, '2 cushon sofa', 356, 2000, 4, '293_sofa.jpg', 'this is a 2 cushion sofa', 'this is a 2 cushion sofa', 'be comfortable', 'be comfortable and proud', 'proud', 1);
+(4, 2, '2 cushon sofa', 356, 2000, 4, '293_sofa.jpg', 'this is a 2 cushion sofa', 'this is a 2 cushion sofa', 'be comfortable', 'be comfortable and proud', 'proud', 1),
+(5, 4, 'computer table', 3000, 2500, 4, '732_compu table.jpeg', 'computer table test', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz', 'test meta', 'cccccccccccccccccccccccccccccccc vvvvvvvvvvvvvvvvvvvvvvvvvvvv bbbbbbbbbbbbbbbbbbbbbbbbb', '7565', 1);
 
 -- --------------------------------------------------------
 
@@ -216,6 +218,19 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `password`, `email`, `mobile`, `added_on`) VALUES
 (1, 'ARF', '123', 'tysonfarib@gmail.com', '52542424', '2021-05-25 12:42:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wishlist`
+--
+
+CREATE TABLE `wishlist` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `added_on` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
@@ -270,6 +285,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `wishlist`
+--
+ALTER TABLE `wishlist`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -283,7 +304,7 @@ ALTER TABLE `admin_users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `contact_us`
@@ -313,13 +334,19 @@ ALTER TABLE `order_status`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `wishlist`
+--
+ALTER TABLE `wishlist`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -62,6 +62,16 @@ day 06/////
 6.product sorting complete functionality
 
 
+day 07/////
+
+fixing top page css
+
+adding wishlist datatable in database 
+wish icon in index,category,search page
+complete wishlist functionality - remove,add,total count,already added 
+restrict Wishlist from anonymous users
+
+
  
 
 
