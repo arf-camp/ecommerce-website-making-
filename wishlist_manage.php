@@ -27,7 +27,7 @@ if(isset($_SESSION['USER_LOGIN']))
 
 		wishlist_add($con,$uid,$pid);
 
-		
+
 	}
 	
 	echo $total_record=mysqli_num_rows(mysqli_query($con,"select * from wishlist where user_id='$uid'"));
@@ -38,7 +38,7 @@ if(isset($_SESSION['USER_LOGIN']))
 
 else{
 
-	//if not login browser will save my wishlist id by the help of session
+	//if not login, browser will save my wishlist id by the help of session
 	$_SESSION['WISHLIST_ID']=$pid;
 	echo "not_login";
 }

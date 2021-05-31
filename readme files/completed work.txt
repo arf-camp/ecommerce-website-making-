@@ -72,7 +72,13 @@ complete wishlist functionality - remove,add,total count,already added
 restrict Wishlist from anonymous users
 
 
- 
+day 08/////
+
+
+completing best seller in admin and front section
+making title meta description ,keyword dynamic on top[ front page]
+
+
 
 
 
