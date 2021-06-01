@@ -79,6 +79,9 @@ completing best seller in admin and front section
 making title meta description ,keyword dynamic on top[ front page]
 
 
+fixing error on admin pannel
+
+
 
 
 
