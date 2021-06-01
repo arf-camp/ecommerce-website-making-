@@ -80,7 +80,7 @@ if(isset($_POST['submit'])){
 //image violation condition
 
 
-if($_GET['id']==0){  //this is insert condition ,file must be selected
+if(isset($_GET['id']) && $_GET['id']==0){  //this is insert condition ,file must be selected
 		if($_FILES['image']['type']!='image/png' && $_FILES['image']['type']!='image/jpg' && $_FILES['image']['type']!='image/jpeg'){
 			$msg="Please select only png,jpg and jpeg image formate";
 		}
@@ -143,21 +143,6 @@ if($_GET['id']==0){  //this is insert condition ,file must be selected
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

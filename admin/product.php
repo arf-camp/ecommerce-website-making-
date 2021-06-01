@@ -147,7 +147,7 @@ $res=mysqli_query($con,$sql);
                      </tr>
 
 
-                     <?php } ?>
+                     <?php $i++; } ?>
 
 
 

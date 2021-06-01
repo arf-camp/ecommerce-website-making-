@@ -52,7 +52,7 @@ $res=mysqli_query($con,$sql);
 								?>
 							   </td>
 							</tr>
-							<?php } ?>
+							<?php $ii++; } ?>
 						 </tbody>
 					  </table>
 				   </div>

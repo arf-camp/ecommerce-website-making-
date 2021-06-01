@@ -18,6 +18,13 @@ function get_safe_value($con,$str){
 }
 
 
-
+function redirect($link){
+	?>
+	<script>
+	window.location.href='<?php echo $link?>';
+	</script>
+	<?php
+	die();
+}
 
 ?>
