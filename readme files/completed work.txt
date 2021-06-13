@@ -85,7 +85,9 @@ fixing error on admin pannel
 
 day 09/////
 
-complete email (gmail smtp) verification OTP 
+complete email (gmail smtp) verification OTP
+forgot password 
+profile page -update
 
 
 

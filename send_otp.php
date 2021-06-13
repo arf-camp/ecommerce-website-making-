@@ -23,7 +23,7 @@ if($type=='email'){
 	$mail->SMTPSecure="tls";
 	$mail->SMTPAuth=true;
 	$mail->Username="arfcampfakeid@gmail.com";               //SMTP_EMAIL_ID
-	$mail->Password="arf@test";          //
+	$mail->Password="ARFCAMP@TEST";                     //SMTP_pass
 	$mail->SetFrom("arfcampfakeid@gmail.com");               //SMTP_EMAIL_ID
 	$mail->addAddress($email);
 	$mail->IsHTML(true);
