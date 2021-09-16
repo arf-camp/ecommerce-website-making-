@@ -90,6 +90,18 @@ forgot password
 profile page -update
 
 
+day 10
+
+1.Subcategories option in admin and front
+2.create a pdf invoice
+3.product quantity management in admin
+4.pending status in admin
+5.Out of stock in the front section
+
+fixing all the previous front end issues and bugs
+
+
+
 
 
 

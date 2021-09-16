@@ -1,10 +1,23 @@
 <?php 
 require('top.php');
 
-if(isset($_GET['id']) && $_GET['id']!=''){
-    $cat_id=mysqli_real_escape_string($con,$_GET['id']);
 
 
+if(!isset($_GET['id']) && $_GET['id']!=''){
+    ?>
+    <script>
+    window.location.href='index.php';
+    </script>
+    <?php
+}
+
+$cat_id=mysqli_real_escape_string($con,$_GET['id']);
+
+//if get sub categories
+$sub_categories='';
+if(isset($_GET['sub_categories'])){
+    $sub_categories=mysqli_real_escape_string($con,$_GET['sub_categories']);
+}
 // for sorting (selected)
 
 $price_high_selected="";
@@ -34,25 +47,19 @@ if(isset($_GET['sort'])){
 
 
     if($cat_id>0){
-        $get_product=get_product($con,'',$cat_id,'','',$sort_order);
-    }else{
+    $get_product=get_product($con,'',$cat_id,'','',$sort_order,'',$sub_categories);
+}else{
         ?>
         <script>
         window.location.href='index.php';
         </script>
         <?php
     }
-}
 
 
 
-else{
-    ?>
-    <script>
-    window.location.href='index.php';
-    </script>
-    <?php
-}                                       
+
+                                      
 ?>
 
 
@@ -68,7 +75,14 @@ else{
                                 <nav class="bradcaump-inner">
                                   <a class="breadcrumb-item" href="index.php">Home</a>
                                   <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
-                                  <span class="breadcrumb-item active"><?php echo $get_product['0']['categories']?></span>
+                                  <span class="breadcrumb-item active">
+                                    <?php
+                                  //prx($get_product);
+                                //  echo $get_product['0']['categories']
+echo "Product";
+                                
+
+                                  ?></span>
                                 </nav>
                             </div>
                         </div>

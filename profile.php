@@ -36,7 +36,7 @@ if(!isset($_SESSION['USER_LOGIN'])){
 						<div class="contact-form-wrap mt--60">
 							<div class="col-xs-12">
 								<div class="contact-title">
-									<h2 class="title__line--6">Profile</h2>
+									<h2 class="title__line--6">Profile Name</h2>
 								</div>
 							</div>
 							<div class="col-xs-12">

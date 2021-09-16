@@ -124,7 +124,22 @@ else if($mypage=='categories.php'){
                                         <?php
                                         foreach($cat_arr as $list){
                                             ?>
-                                            <li><a href="categories.php?id=<?php echo $list['id']?>"><?php echo $list['categories']?></a></li>
+                                            <li class="drop"><a href="categories.php?id=<?php echo $list['id']?>"><?php echo $list['categories']?></a>
+                                            <?php
+                                            $cat_id=$list['id'];
+                                            $sub_cat_res=mysqli_query($con,"select * from sub_categories where status='1' and categories_id='$cat_id'");
+                                            if(mysqli_num_rows($sub_cat_res)>0){
+                                            ?>
+                                            
+                                               <ul class="dropdown">
+                                                    <?php
+                                                    while($sub_cat_rows=mysqli_fetch_assoc($sub_cat_res)){
+                                            echo '<li><a href="categories.php?id='.$list['id'].'&sub_categories='.$sub_cat_rows['id'].'">'.$sub_cat_rows['sub_categories'].'</a></li>';
+                                                    }
+                                                    ?>
+                                                </ul>
+                                                <?php } ?>
+                                            </li>
                                             <?php
                                         }
                                         ?>
@@ -139,7 +154,23 @@ else if($mypage=='categories.php'){
                                             <?php
                                             foreach($cat_arr as $list){
                                                 ?>
-                                                <li><a href="categories.php?id=<?php echo $list['id']?>"><?php echo $list['categories']?></a></li>
+                                                <li class="drop"><a href="categories.php?id=<?php echo $list['id']?>"><?php echo $list['categories']?></a>
+                                            <?php
+                                            $cat_id=$list['id'];
+                                            $sub_cat_res=mysqli_query($con,"select * from sub_categories where status='1' and categories_id='$cat_id'");
+                                            if(mysqli_num_rows($sub_cat_res)>0){
+                                            ?>
+                                            
+                                               <ul class="dropdown">
+                                                    <?php
+                                                    while($sub_cat_rows=mysqli_fetch_assoc($sub_cat_res)){
+                                                        echo '<li><a href="categories.php?id='.$list['id'].'&sub_categories='.$sub_cat_rows['id'].'">'.$sub_cat_rows['sub_categories'].'</a></li>
+                                                    ';
+                                                    }
+                                                    ?>
+                                                </ul>
+                                                <?php } ?>
+                                            </li>
                                                 <?php
                                             }
                                             ?>
@@ -181,7 +212,7 @@ else if($mypage=='categories.php'){
                                                 <ul class="navbar-nav mr-auto">
                                                   <li class="nav-item dropdown">
                                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                      Account
+                                                    <?php echo  $_SESSION['USER_NAME']; ?>
                                                     </a>
                                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                       <a class="dropdown-item" href="my_order.php">Order</a>

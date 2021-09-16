@@ -22,12 +22,12 @@ if($type=='email'){
 	$mail->Port=587;
 	$mail->SMTPSecure="tls";
 	$mail->SMTPAuth=true;
-	$mail->Username="arfcampfakeid@gmail.com";               //SMTP_EMAIL_ID
-	$mail->Password="ARFCAMP@TEST";                     //SMTP_pass
-	$mail->SetFrom("arfcampfakeid@gmail.com");               //SMTP_EMAIL_ID
+	$mail->Username="";               //SMTP_EMAIL_ID
+	$mail->Password="";                     //SMTP_pass
+	$mail->SetFrom("");               //SMTP_EMAIL_ID
 	$mail->addAddress($email);
 	$mail->IsHTML(true);
-	$mail->Subject="Registered OTP";
+	$mail->Subject="From Asbab -Registered OTP";
 	$mail->Body=$html;
 	$mail->SMTPOptions=array('ssl'=>array(
 		'verify_peer'=>false,

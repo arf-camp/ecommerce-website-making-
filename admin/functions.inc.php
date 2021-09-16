@@ -27,4 +27,13 @@ function redirect($link){
 	die();
 }
 
+
+
+function productSoldQtyByProductId($con,$pid){
+	$sql="select sum(order_detail.qty) as qty from order_detail,`order` where `order`.id=order_detail.order_id and order_detail.product_id=$pid and `order`.order_status!=4";
+	$res=mysqli_query($con,$sql);
+	$row=mysqli_fetch_assoc($res);
+	return $row['qty'];
+}
+
 ?>

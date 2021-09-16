@@ -99,15 +99,17 @@ $res=mysqli_query($con,$sql);
 
 					    <td><?php echo $row['mrp']?></td>
 						<td><?php echo $row['price']?></td>
-					    <td><?php echo $row['qty']?></td>
+					    <td><?php echo $row['qty']?> <br/>
+           <?php
+                 $productSoldQtyByProductId=productSoldQtyByProductId($con,$row['id']);
+                 $pneding_qty=$row['qty']-$productSoldQtyByProductId;
+                 
+                 ?>
+                 Pending Qty <?php echo $pneding_qty?>
+                      
+              </td>
+                 
                   
-
-
-
-
-
-
-
 
 
                   <td>

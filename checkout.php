@@ -270,7 +270,7 @@ if(isset($_POST['submit']))
         <div class="paymentinfo">
                                                
            <div class="single-method">COD <input type="radio" name="payment_type" value="cod" required/>
-                        &nbsp;&nbsp;biKash <input type="radio" name="payment_type" value="biKash" required/>
+                        <!-- &nbsp;&nbsp;biKash <input type="radio" name="payment_type" value="biKash" required/> -->
                                                 
            </div>
                                                 

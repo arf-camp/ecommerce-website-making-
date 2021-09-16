@@ -101,7 +101,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="copyright__inner">
-                                <p>Copyright© <a href="https://www.facebook.com/arfcamp.net">ARF_CAMP</a><?php echo date('Y') ?> All right reserved.</p>
+                                <p>Copyright© <a target="_blank" href="https://arf-camp.github.io/portfolio/"> ARF_CODERS_CAMP </a><?php echo date('Y') ?> All right reserved.</p>
                                 <a href="#"><img src="images/others/shape/paypol.png" alt="payment images"></a>
                             </div>
                         </div>

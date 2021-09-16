@@ -9,7 +9,7 @@ if(!isset($_SESSION['USER_LOGIN'])){
 }
 $uid=$_SESSION['USER_ID'];
 
-$res=mysqli_query($con,"select product.name,product.image,product.price,product.mrp,wishlist.id from product,wishlist where wishlist.product_id=product.id and wishlist.user_id='$uid'");
+$res=mysqli_query($con,"select product.name,product.image,product.price,product.mrp,wishlist.id,wishlist.product_id from product,wishlist where wishlist.product_id=product.id and wishlist.user_id='$uid'");
 ?>
 
  <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/4.jpg) no-repeat scroll center center / cover ;">
@@ -50,13 +50,15 @@ $res=mysqli_query($con,"select product.name,product.image,product.price,product.
 										while($row=mysqli_fetch_assoc($res)){
 										?>
 											<tr>
-												<td class="product-thumbnail"><a ><img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$row['image']?>"  /></a></td>
-												<td class="product-name"><a href="#"><?php echo $row['name']?></a>
+												<td class="product-thumbnail"><a href="product.php?id=<?php echo $row['product_id']?>" ><img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$row['image']?>"  />GO to Cart</a></td>
+												<td class="product-name"><a ><?php echo $row['name']?></a>
 													<ul  class="pro__prize">
 														<li class="old__prize"><?php echo $row['mrp']?></li>
 														<li><?php echo $row['price']?></li>
 													</ul>
 												</td>
+
+                                             <!--    //remove button -->
 												<td class="product-remove"><a href="wishlist.php?wishlist_id=<?php echo $row['id']?>"><i class="icon-trash icons"></i></a></td>
 											</tr>
 											<?php } ?>
@@ -69,9 +71,9 @@ $res=mysqli_query($con,"select product.name,product.image,product.price,product.
                                         <div class="buttons-cart">
                                             <a href="<?php echo SITE_PATH?>">Continue Shopping</a>
                                         </div>
-                                        <div class="buttons-cart checkout--btn">
-                                            <a href="<?php echo SITE_PATH?>checkout.php">checkout</a>
-                                        </div>
+                                        <!-- <div class="buttons-cart checkout--btn">
+                                            <a href="<?php //echo SITE_PATH?>checkout.php">checkout</a>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>

@@ -14,8 +14,8 @@
                             <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
                                 <div class="slide">
                                     <div class="slider__inner">
-                                        <h2>collection 2018</h2>
-                                        <h1>NICE CHAIR</h1>
+                                        <h2>New Collection 2021</h2>
+                                        <h1>Stay Safe And Healthy</h1>
                                         <div class="cr__btn">
                                             <a href="#">Shop Now</a>
                                         </div>
@@ -38,8 +38,8 @@
                             <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
                                 <div class="slide">
                                     <div class="slider__inner">
-                                        <h2>collection 2018</h2>
-                                        <h1>NICE CHAIR</h1>
+                                        <h2>New Collection 2021</h2>
+                                        <h1>Be Safe And Healthy</h1>
                                         <div class="cr__btn">
                                             <a href="#">Shop Now</a>
                                         </div>
