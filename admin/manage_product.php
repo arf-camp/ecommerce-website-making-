@@ -131,7 +131,7 @@ if(isset($_GET['id']) && $_GET['id']==0){  //this is insert condition ,file must
 
 
 
-			mysqli_query($con,"insert into product(categories_id,name,mrp,price,qty,short_desc,description,meta_title,meta_desc,meta_keyword,status,image,best_seller) values('$categories_id','$name','$mrp','$price','$qty','$short_desc','$description','$meta_title','$meta_desc','$meta_keyword',1,'$image','$best_seller',sub_categories_id='$sub_categories_id')");
+			mysqli_query($con,"insert into product(categories_id,name,mrp,price,qty,short_desc,description,meta_title,meta_desc,meta_keyword,status,image,best_seller,sub_categories_id) values('$categories_id','$name','$mrp','$price','$qty','$short_desc','$description','$meta_title','$meta_desc','$meta_keyword',1,'$image','$best_seller',sub_categories_id='$sub_categories_id')");
 		}
 		header('location:product.php');
 		die();
